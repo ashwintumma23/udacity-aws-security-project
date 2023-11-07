@@ -1,0 +1,10 @@
+Based on the architecture diagram, and the steps you have taken so far to upload data and access the application web service, identify at least 2 obvious poor practices as it relates to security.  Include justification.
+
+# Poor practice 1
+The WebAppsSG is open for all ports on the internet, and the Web Service Instance sits in the public subnet. This should be avoided as any host can connect to it. So, it is advisable to place it in the private subnet, and allow only port 80 and 443 to ensure secure port access.
+
+# Poor practice 2
+The IAM role has complete administrative access on the S3 buckets. This needs to be replaced with only specific and required access to the S3 bucket
+
+# Poor practice 3
+The private routes have destination CIDR to the internet (0.0.0.0), which needs to be avoided. Any bad service, if sitting on the private subnet could talk to any service on the internet. 

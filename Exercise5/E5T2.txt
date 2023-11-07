@@ -1,0 +1,24 @@
+# Identify tools that will allow you to do the following:
+
+## Scan infrastructure as code templates
+* Terrascan
+
+### Example vulnerability
+* Use of proper configuration specifications
+* Valid permissions specifications
+* Non-SSL flaggings
+
+##Scan AMI’s or containers for OS vulnerabilities
+* AquaSec, Clair
+
+### Example vulnerability
+* CVE
+* OWASP Top 10
+
+##Scan an AWS environment for cloud configuration vulnerabilities
+* Config, Security Hub
+
+### Example vulnerability
+* S3 buckets with invalid or too open permissions
+* Password policy violations
+* Check on S3 bucket encryption is set

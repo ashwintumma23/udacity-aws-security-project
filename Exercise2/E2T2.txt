@@ -1,0 +1,15 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+* IAM policy for the S3 bucket is not flowing the principle of least privilege, the entire access to the bucket is open
+* Application running on port 5000 can be accessed via the internet, because that port is open for publically without restrictions
+* Serverside encryption and logging is not enabled for S3 buckets which makes their content vulnerable if found
+* EC2 instances management should be done via the Systems Manager
+
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+* Multi-Factor Authentication (MFA) should be enabled for Root User
+* Strict IAM Password policy should be set
+* Disable all the non required port access from the EC2 instances, in other words, decrease the attack surface altogether
+* Enable logging for S3 Buckets for accountability 
+* Default Security Group can block all traffic, so that even if the developer has not specified the traffic rules, there is no accidental security violation

@@ -1,0 +1,15 @@
+Disable Security Hub and Guard Duty.
+Delete recipe files uploaded to the S3 buckets.
+Delete your cloud formation stacks.
+
+All resources are cleaned up programmatically 
+
+
+
+aws s3 rm s3://cand-c3-free-recipes-889569321273/free_recipe.txt
+aws s3 rm s3://cand-c3-secret-recipes-889569321273/secret_recipe.txt
+
+
+aws cloudformation delete-stack --stack-name c3-app
+aws cloudformation delete-stack --stack-name c3-s3 
+aws cloudformation delete-stack --stack-name c3-vpc

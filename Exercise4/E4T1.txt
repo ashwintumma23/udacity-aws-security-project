@@ -1,0 +1,13 @@
+
+
+# Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
+
+* Do not allow SSH access from public internet to the EC2 instances
+* Restrict network traffic from outside to reach only the application servers
+* Update password policies to have strict rules to configure complex passwords, so that it is difficult to breach them
+
+
+# Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+
+* Security Groups policy of the instances can be updated to only access the free recipes S3 bucket and in a read only configuration
+* Server side encryption should be enabled on the bucket
